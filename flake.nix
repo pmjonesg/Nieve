@@ -51,9 +51,21 @@
           };
         };
 
+        # modules = [
+        #   ./config/languages/linters.nix
+        # ];
+
         packages = {
           # Lets you run `nix run .` to start nixvim
           default = nvim;
+        };
+
+        devShells.default = pkgs.mkShell {
+          name = "nvim";
+          packages = with pkgs; [ statix prettierd eslint_d eslint tflint pylint ];
+          shellHook = ''
+            PS1="nvim$ "
+          '';
         };
 
         formatter = pkgs.nixfmt-rfc-style;

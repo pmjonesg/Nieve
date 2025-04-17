@@ -144,7 +144,7 @@
 
       {
         mode = "n";
-        key = "<leader>w-";
+        key = "<leader>ws";
         action = "<C-W>s";
         options = {
           silent = true;
@@ -154,7 +154,7 @@
 
       {
         mode = "n";
-        key = "<leader>w|";
+        key = "<leader>wv";
         action = "<C-W>v";
         options = {
           silent = true;
@@ -442,14 +442,14 @@
         action = "<Esc>";
       }
 
-      {
-        mode = "n";
-        key = "<C-f>";
-        action = "!tmux new tmux-sessionizer<CR>";
-        options = {
-          desc = "Switch between projects";
-        };
-      }
+      # {
+      #   mode = "n";
+      #   key = "<C-f>";
+      #   action = "!tmux new tmux-sessionizer<CR>";
+      #   options = {
+      #     desc = "Switch between projects";
+      #   };
+      # }
 
       # Set highlight on search, but clear on pressing <Esc> in normal mode
       {

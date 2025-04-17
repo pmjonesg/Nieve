@@ -6,7 +6,7 @@
   config = lib.mkIf config.lsp-nvim.enable {
     plugins = {
       lsp-format = {
-        enable = false; # Enable it if you want lsp-format integration for none-ls
+        enable = true; # Enable it if you want lsp-format integration for none-ls
       };
       lsp = {
         enable = true;
@@ -38,10 +38,10 @@
             };
           };
           nil_ls = {
-            enable = false;
+            enable = true;
           };
           nixd = {
-            enable = true;
+            enable = false;
           };
           ts_ls = {
             enable = true;
@@ -110,6 +110,18 @@
                 enable = true;
               };
             };
+          };
+
+          terraformls = {
+            enable = true;
+          };
+
+          jdtls = {
+            enable = true;
+          };
+
+          bashls = {
+            enable = true;
           };
         };
         keymaps = {

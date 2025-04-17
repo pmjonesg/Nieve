@@ -37,6 +37,7 @@
       vim-test
       neotest-python
       neotest-vitest
+      # neotest-java
     ];
     extraConfigLua = ''
        require("neotest").setup({

@@ -1,4 +1,4 @@
-{ lib, config, ... }:
+{ lib, ... }:
 {
   # Import all your configuration modules here
   imports = [
@@ -19,6 +19,7 @@
     ./telescope
     ./ui
     ./utils
+    ./notes
   ];
 
   bufferlines.enable = lib.mkDefault true;
@@ -38,4 +39,5 @@
   telescope.enable = lib.mkDefault true;
   ui.enable = lib.mkDefault true;
   utils.enable = lib.mkDefault true;
+  notes.enable = lib.mkDefault true;
 }

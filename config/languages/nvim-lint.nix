@@ -1,4 +1,4 @@
-{ lib, config, ... }:
+{ lib, config, pkgs, ... }:
 {
   options = {
     nvim-lint.enable = lib.mkEnableOption "Enable nvim-lint module";
@@ -12,7 +12,9 @@
         go = [ "golangci-lint" ];
         nix = [ "statix" ];
         lua = [ "selene" ];
-        python = [ "flake8" ];
+        python = [ "pylint" ];
+        ruby = [ "ruby" ];
+        terraform = [ "tflint" ];
         javascript = [ "eslint_d" ];
         javascriptreact = [ "eslint_d" ];
         typescript = [ "eslint_d" ];
